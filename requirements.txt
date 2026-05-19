@@ -38,4 +38,4 @@ tinydb
 jinja2
 psycopg2-binary
 scikit-learn
-Wikipedia
+Wikipediapython-dotenv
