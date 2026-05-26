@@ -10,23 +10,23 @@ Reflection is a key design pattern in agentic workflows where an AI agent critiq
 
 The repository is organized into two primary project directories, each exploring a different dimension of the reflection pattern:
 
-### 1. 📈 [01_reflection/](file:///home/dac/DacProjects/dl-agentic-ai/01_reflection) (Multi-Modal Code & Chart Refinement)
-* **[m2_ugl_1.ipynb](file:///home/dac/DacProjects/dl-agentic-ai/01_reflection/m2_ugl_1.ipynb)**: The main Jupyter notebook orchestrating the end-to-end chart generation, visual critique, and refinement workflow.
-* **[utils.py](file:///home/dac/DacProjects/dl-agentic-ai/01_reflection/utils.py)**: Helper module containing functions for loading data, encoding/decoding image files, and executing the generated Python scripts within a safe global namespace.
+### 1. 📈 [01_reflection/](01_reflection) (Multi-Modal Code & Chart Refinement)
+* **[m2_ugl_1.ipynb](01_reflection/m2_ugl_1.ipynb)**: The main Jupyter notebook orchestrating the end-to-end chart generation, visual critique, and refinement workflow.
+* **[utils.py](01_reflection/utils.py)**: Helper module containing functions for loading data, encoding/decoding image files, and executing the generated Python scripts within a safe global namespace.
   * Key helper functions include:
-    * `[load_and_prepare_data](file:///home/dac/DacProjects/dl-agentic-ai/01_reflection/utils.py#L15-L21)`: Reads the dataset and parses date components (year, quarter, month).
-    * `[print_html](file:///home/dac/DacProjects/dl-agentic-ai/01_reflection/utils.py#L23-L32)`: Renders strings, tables, or images in standard output.
-    * `[get_response](file:///home/dac/DacProjects/dl-agentic-ai/01_reflection/utils.py#L51-L52)`: Wraps client calls with automatic retry logic for rate limits.
-    * `[image_openai_call](file:///home/dac/DacProjects/dl-agentic-ai/01_reflection/utils.py#L72-L73)`: Sends base64-encoded image payloads to the multi-modal Gemini model.
-* **[coffee_sales.csv](file:///home/dac/DacProjects/dl-agentic-ai/01_reflection/coffee_sales.csv)**: A dataset tracking sales quantities and revenue for different coffee products.
+    * `[load_and_prepare_data](01_reflection/utils.py#L15-L21)`: Reads the dataset and parses date components (year, quarter, month).
+    * `[print_html](01_reflection/utils.py#L23-L32)`: Renders strings, tables, or images in standard output.
+    * `[get_response](01_reflection/utils.py#L51-L52)`: Wraps client calls with automatic retry logic for rate limits.
+    * `[image_openai_call](01_reflection/utils.py#L72-L73)`: Sends base64-encoded image payloads to the multi-modal Gemini model.
+* **[coffee_sales.csv](01_reflection/coffee_sales.csv)**: A dataset tracking sales quantities and revenue for different coffee products.
 
-### 2. 🗄️ [02_improving_reflection/](file:///home/dac/DacProjects/dl-agentic-ai/02_improving_reflection) (SQL Generation with External Feedback)
-* **[M2_UGL_2.ipynb](file:///home/dac/DacProjects/dl-agentic-ai/02_improving_reflection/M2_UGL_2.ipynb)**: Jupyter notebook demonstrating how SQL query generation is improved by reflecting on query execution results (external environment feedback).
-* **[utils.py](file:///home/dac/DacProjects/dl-agentic-ai/02_improving_reflection/utils.py)**: Helper script managing the SQLite database environment.
+### 2. 🗄️ [02_improving_reflection/](02_improving_reflection) (SQL Generation with External Feedback)
+* **[M2_UGL_2.ipynb](02_improving_reflection/M2_UGL_2.ipynb)**: Jupyter notebook demonstrating how SQL query generation is improved by reflecting on query execution results (external environment feedback).
+* **[utils.py](02_improving_reflection/utils.py)**: Helper script managing the SQLite database environment.
   * Key helper functions include:
-    * `[create_transactions_db](file:///home/dac/DacProjects/dl-agentic-ai/02_improving_reflection/utils.py#L5-L49)`: Sets up an SQLite database loaded with mock retail transaction data.
-    * `[get_schema](file:///home/dac/DacProjects/dl-agentic-ai/02_improving_reflection/utils.py#L50-L71)`: Extracts table layouts and data types to construct LLM prompts.
-    * `[execute_sql](file:///home/dac/DacProjects/dl-agentic-ai/02_improving_reflection/utils.py#L73-L82)`: Safely executes queries and handles syntax errors, returning results as Pandas DataFrames.
+    * `[create_transactions_db](02_improving_reflection/utils.py#L5-L49)`: Sets up an SQLite database loaded with mock retail transaction data.
+    * `[get_schema](02_improving_reflection/utils.py#L50-L71)`: Extracts table layouts and data types to construct LLM prompts.
+    * `[execute_sql](02_improving_reflection/utils.py#L73-L82)`: Safely executes queries and handles syntax errors, returning results as Pandas DataFrames.
 
 ---
 
@@ -57,7 +57,7 @@ Evaluating the syntax of a SQL query is not enough to verify semantic correctnes
 ## 🚀 Setup & Execution
 
 ### 1. Installation
-Clone the repository and install the dependencies listed in **[requirements.txt](file:///home/dac/DacProjects/dl-agentic-ai/requirements.txt)**:
+Clone the repository and install the dependencies listed in **[requirements.txt](requirements.txt)**:
 ```bash
 # Create and activate a virtual environment
 python3 -m venv venv
@@ -68,7 +68,7 @@ pip install -r requirements.txt
 ```
 
 ### 2. Environment Configuration
-Create a **[.env](file:///home/dac/DacProjects/dl-agentic-ai/.env)** file in the root directory and add your Gemini API Key:
+Create a **[.env](.env)** file in the root directory and add your Gemini API Key:
 ```env
 GEMINI_API_KEY=your-api-key-here
 ```
@@ -78,8 +78,8 @@ Open the directory inside your Jupyter notebook server or IDE environment:
 ```bash
 jupyter notebook
 ```
-* To work on the visualization exercise, run the cells in **[01_reflection/m2_ugl_1.ipynb](file:///home/dac/DacProjects/dl-agentic-ai/01_reflection/m2_ugl_1.ipynb)**.
-* To work on the SQL generation exercise, run the cells in **[02_improving_reflection/M2_UGL_2.ipynb](file:///home/dac/DacProjects/dl-agentic-ai/02_improving_reflection/M2_UGL_2.ipynb)**.
+* To work on the visualization exercise, run the cells in **[01_reflection/m2_ugl_1.ipynb](01_reflection/m2_ugl_1.ipynb)**.
+* To work on the SQL generation exercise, run the cells in **[02_improving_reflection/M2_UGL_2.ipynb](02_improving_reflection/M2_UGL_2.ipynb)**.
 
 ---
 
