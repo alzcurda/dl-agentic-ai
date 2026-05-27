@@ -2,6 +2,7 @@
 aisuite==0.1.11
 anthropic
 docstring-parser
+google-genai
 markdown
 mistralai
 openai
@@ -38,4 +39,4 @@ tinydb
 jinja2
 psycopg2-binary
 scikit-learn
-Wikipediapython-dotenv
+wikipedia
